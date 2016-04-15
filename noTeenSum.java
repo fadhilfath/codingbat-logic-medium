@@ -1,28 +1,24 @@
 public int noTeenSum(int a, int b, int c) {
   int result = 0;
   if(a >= 13 && a <= 19){
-    if(fixTeen(a) == 0){
-      result += 0;
-    }else{
-      result += a;
-    }
+    result += checkIfItIsTeen(a);
   }else{ result += a; }
   if(b >= 13 && b <= 19){
-    if(fixTeen(b) == 0){
-      result += 0;
-    }else{
-      result += b;
-    }
+    result += checkIfItIsTeen(b);
   }else{ result += b; }
   if(c >= 13 && c <= 19){
-    if(fixTeen(c) == 0){
-      result += 0;
-    }else{
-      result += c;
-    }
+    result += checkIfItIsTeen(c);
   }else{ result += c; }
   
   return result;
+}
+
+public int checkIfItIsTeen(int n){
+  if(fixTeen(n) == 0){
+      return 0;
+    }else{
+      return n;
+    }
 }
 
 public int fixTeen(int n){
