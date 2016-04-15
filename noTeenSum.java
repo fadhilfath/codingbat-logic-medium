@@ -1,16 +1,20 @@
 public int noTeenSum(int a, int b, int c) {
   int result = 0;
-  if(a >= 13 && a <= 19){
+  if(checkTeensRange(a)){
     result += checkIfItIsTeen(a);
   }else{ result += a; }
-  if(b >= 13 && b <= 19){
+  if(checkTeensRange(b)){
     result += checkIfItIsTeen(b);
   }else{ result += b; }
-  if(c >= 13 && c <= 19){
+  if(checkTeensRange(c)){
     result += checkIfItIsTeen(c);
   }else{ result += c; }
   
   return result;
+}
+
+public boolean checkTeensRange(int n){
+  return n >= 13 && n <= 19;
 }
 
 public int checkIfItIsTeen(int n){
